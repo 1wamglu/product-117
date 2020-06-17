@@ -1,0 +1,42 @@
+.public-header{
+    width: 100%;
+    height: 50px;
+    background: rgb(94, 86, 79);
+    display: flex;
+    justify-content: space-between;
+    /*头部定位，宽铺满，left是x 坐标，top是y坐标，position确定位置*/
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    /*表头定位*/
+    z-index: 99999;
+
+
+}
+.public-header > .content{
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.public-header > .content > .content-item{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.public-header > .content > .content-item > a{
+    text-align: center;
+    color: #b0b0b0;
+    transition: 0.2s ease;
+    font-size: 13px;
+    text-decoration: none;
+}
+.public-header > .content > .content-item:hover > a{
+    color: #fff;
+    text-decoration: none;
+}

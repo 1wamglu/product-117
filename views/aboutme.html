@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!--用来显示网头部的文字信息的标签-->
+    <title>关于我们</title>
+    <!--link标签用来链接外部资源的标签-->
+    <link rel="short icon" href="../upload/logo2.jpg">
+    <link rel="stylesheet" href="/css/public/header.css">
+    <link rel="stylesheet" href="/css/public/prolist.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/ExternalStyle.css">
+
+    <style>
+        .MD_external_div .MD_bg_img{
+            width: 100%;
+        }
+
+        .MD_external_div{
+            position: relative;
+        }
+
+        .MD_inner_div{
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            width: 66px;
+            height: 76px;
+
+            margin-left: -33px;
+            margin-top: -60px;
+
+            text-align: center;
+        }
+
+        .MD_external_div .MD_inner_div button{
+            background: rgb(32, 131, 204);
+            width: 66px;
+            height: 20px;
+
+            margin-top: 5px;
+        }
+
+        .MD_external_div .MD_inner_div span{
+            display: block;
+            margin-top: 5px;
+        }
+
+        .MD_bottom_div{
+            width: 100%;
+        }
+
+        .MD_bottom_div .MD_bottom_inner_div{
+            width: 90%;
+            height: 50px;
+            margin: 0 auto;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            background: white;
+            line-height: 50px;
+            margin-top: 10px;
+        }
+
+        .MD_left_img{
+            float: left;
+            margin-left: 10px;
+            margin-top: 15px;
+            margin-right: 20px;
+        }
+
+        .MD_right_img{
+            float: right;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--h5里面新增的语义化标签,它没有特殊的意义,仅是用来增强程序的可读性-->
+<%- include public/header.html %>
+
+
+<div class="MD_external_div">
+    <img class="MD_bg_img" src="../upload/banner5.jpg" alt="">
+    <div class="MD_inner_div">
+        <img class="MD_head_img" src="../upload/logo.jpg" height="41" width="78"/>
+
+        <script>
+            document.getElementById("MD_userName").innerHTML = window.localStorage.getItem("name");
+        </script>
+
+        <button id="MD_btn">退出登录</button>
+
+        <script>
+            var btn = document.querySelector("#MD_btn");
+            btn.onclick = function(){
+                window.localStorage.removeItem("name");
+                location.href = "http://127.0.0.1:3000";
+            }
+        </script>
+    </div>
+</div>
+
+<!--<ul class="content">-->
+    <!--<li class="content-item">-->
+        <!--<a href="">欢迎你,admin</a>-->
+    <!--</li>-->
+    <!--<li class="content-item">-->
+        <!--<a href="http://127.0.0.1:3000">安全退出</a>-->
+    <!--</li>-->
+<!--</ul>-->
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="../upload/gr_1.jpg" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="../upload/jt.jpg" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="../upload/gr_1.jpg" alt="">
+        <span>智能管理</span>
+        <img class="MD_right_img" src="../upload/jt.jpg" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="../upload/gr_1.jpg" alt="">
+        <span>操作简单</span>
+        <img class="MD_right_img" src="../upload/jt.jpg" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="../upload/gr_1.jpg" alt="">
+        <span>成本低廉</span>
+        <img class="MD_right_img" src="../upload/jt.jpg" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="../upload/gr_1.jpg" alt="">
+        <span>界面美观</span>
+        <img class="MD_right_img" src="../upload/jt.jpg" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="../upload/gr_1.jpg" alt="">
+        <span>功能齐全</span>
+        <img class="MD_right_img" src="../upload/jt.jpg" alt="">
+    </div>
+</div>
+
+
+
+<!--h5里面新增的语义化标签,它没有特殊的意义,仅是用来增强程序的可读性-->
+<footer>
+    <%- include public/prolist.html %>
+</footer>
+</body>
+</html>

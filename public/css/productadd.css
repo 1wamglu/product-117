@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*font-family: sans-serif;*/
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #cacfe3, rgba(255, 198, 236, 0.49));
+}
+.main-content{
+    margin-top:50px;
+    width: 100%;
+    padding: 10px;
+    display: table;
+    /*justify-content: flex-start;*/
+}
+.main-content > .product-page{
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 40px;
+    /*padding-left: 14px;*/
+}
+span{
+    display: block;
+}
